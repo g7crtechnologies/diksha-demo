@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: avinashpullurusunbirdapimanagerutil 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avinashpullurusunbirdapimanagerutil
+  template:
+    metadata:
+      labels:
+        app: avinashpullurusunbirdapimanagerutil 
+    spec:
+      containers:
+        - name: avinashpullurusunbirdapimanagerutil 
+          image: estacrakspoc.azurecr.io/avinashpullurusunbirdapimanagerutil
+          ports:
+          - containerPort: 4000
